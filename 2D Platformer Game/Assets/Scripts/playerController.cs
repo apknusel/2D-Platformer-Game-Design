@@ -7,6 +7,10 @@ public class playerController : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
 
+    public Transform firePoint;
+    public Transform crouchFirePoint;
+    public GameObject bulletPrefab;
+
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
@@ -32,6 +36,19 @@ public class playerController : MonoBehaviour
         {
             crouch = false;
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (crouch == true)
+            {
+                crouchShoot();
+            }
+            else
+            {
+                animator.Play("stillshooting", 0, 0);
+                Shoot();
+            }
+        }
     }
 
     public void onLanding()
@@ -42,6 +59,16 @@ public class playerController : MonoBehaviour
     public void onCrouching(bool isCrouching)
     {
         animator.SetBool("isCrouching", isCrouching);
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void crouchShoot()
+    {
+        Instantiate(bulletPrefab, crouchFirePoint.position, firePoint.rotation);
     }
 
     void FixedUpdate()

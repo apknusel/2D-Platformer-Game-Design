@@ -9,6 +9,13 @@ public class UIOverlay : MonoBehaviour
 
     public void updateAmmo(int ammoCount)
     {
-        ammoDisplay.text = ammoCount.ToString();
+        if (ammoCount == -1)
+        {
+            ammoDisplay.text = "INFINITE";
+        }
+        else
+        {
+            ammoDisplay.text = ammoCount.ToString();
+        }
     }
 }

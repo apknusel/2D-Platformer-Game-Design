@@ -9,6 +9,10 @@ TagManager:
   - enemy
   - collisionTiles
   - infiniteammo
+  - shield powerup
+  - shield
+  - enemybullet
+  - ammo
   layers:
   - Default
   - TransparentFX

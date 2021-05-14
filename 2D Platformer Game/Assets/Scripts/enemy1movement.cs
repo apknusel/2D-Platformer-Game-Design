@@ -38,5 +38,10 @@ public class enemy1movement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (trig.gameObject.CompareTag("shield"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

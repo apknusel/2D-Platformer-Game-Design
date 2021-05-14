@@ -8,11 +8,15 @@ public class playerController : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
 
+    public GameObject shield;
+    private bool activeShield;
+
     public Transform firePoint;
     public Transform crouchFirePoint;
     public GameObject bulletPrefab;
 
     public int ammoCount = 10;
+    private bool infiniteAmmo;
     private int tempAmmo;
     public  UIOverlay overlay;
 
@@ -25,6 +29,8 @@ public class playerController : MonoBehaviour
     void Start()
     {
         overlay.updateAmmo(ammoCount);
+        activeShield = false;
+        shield.SetActive(false);
     }
 
     void Update()
@@ -49,8 +55,10 @@ public class playerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && ammoCount != 0)
         {
-            ammoCount -= 1;
-            overlay.updateAmmo(ammoCount);
+            if (!infiniteAmmo)
+            {
+                ammoCount -= 1;
+            }
             if (crouch == true)
             {
                 crouchShoot();
@@ -61,6 +69,7 @@ public class playerController : MonoBehaviour
                 Shoot();
             }
         }
+        overlay.updateAmmo(ammoCount);
     }
 
     public void onLanding()
@@ -91,7 +100,13 @@ public class playerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        if ((collision.gameObject.tag == "enemy" || collision.gameObject.tag == "enemybullet") && activeShield == true)
+        {
+            Destroy(collision.gameObject);
+            activeShield = false;
+            shield.SetActive(false);
+        }
+        else if ((collision.gameObject.tag == "enemy" || collision.gameObject.tag == "enemybullet") && activeShield == false)
         {
             SceneManager.LoadScene("Death Screen");
         }
@@ -101,15 +116,46 @@ public class playerController : MonoBehaviour
             StartCoroutine(AmmoPowerup());
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "ammo")
+        {
+            ammoCount += 1;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "shield powerup")
+        {
+            if (!activeShield)
+            {
+                activeShield = true;
+                shield.SetActive(true);
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    public bool ActiveShield
+    {
+        get
+        {
+            return activeShield;
+        }
+        set
+        {
+            activeShield = value;
+        }
+    }
+
+    public void disableShield()
+    {
+        activeShield = false;
     }
 
     IEnumerator AmmoPowerup()
     {
+        infiniteAmmo = true;
         tempAmmo = ammoCount;
         ammoCount = -1;
-        overlay.updateAmmo(ammoCount);
         yield return new WaitForSeconds(5);
-        overlay.updateAmmo(tempAmmo);
+        infiniteAmmo = false;
         ammoCount = tempAmmo;
     }
 }

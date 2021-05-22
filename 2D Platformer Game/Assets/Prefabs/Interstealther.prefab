@@ -237,7 +237,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c10008151ef4d3d4ab5b54f975b27ba3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -312,7 +312,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8366303577634114291, guid: 95ed6968408e3c4448402a1811c15af3,
     type: 3}
   ammoCount: 10
-  overlay: {fileID: 1857465651534735714, guid: c047cdbde22ce13438d81e9cf5ebd0ad, type: 3}
+  overlay: {fileID: 997903904749815747, guid: 7e306da3b5f776e47bb82a4c93fb4722, type: 3}
   runSpeed: 20
 --- !u!61 &6478703776246612901
 BoxCollider2D:

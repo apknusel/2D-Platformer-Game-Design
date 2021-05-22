@@ -15,10 +15,10 @@ public class playerController : MonoBehaviour
     public Transform crouchFirePoint;
     public GameObject bulletPrefab;
 
-    public int ammoCount = 10;
+    public int ammoCount;
     private bool infiniteAmmo;
     private int tempAmmo;
-    public  UIOverlay overlay;
+    public UIOverlay overlay;
 
     public float runSpeed = 40f;
 

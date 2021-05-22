@@ -9,7 +9,7 @@ public class finishLine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Win Screen");
+            SceneManager.LoadScene("Boss Level");
         }
     }
 }

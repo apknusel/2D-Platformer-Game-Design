@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19f048e1a9812245a55a03de354622a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: 010c2e203ca0ffa4f9a7843518dbeb3f, type: 2}
   controller: {fileID: 6478703776246612903}
   animator: {fileID: 6478703776246612899}
   shield: {fileID: 6478703775647470898}

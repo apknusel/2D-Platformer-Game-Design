@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
+    public SceneManager manager;
+
     public CharacterController2D controller;
     public Animator animator;
 
@@ -108,7 +110,7 @@ public class playerController : MonoBehaviour
         }
         else if ((collision.gameObject.tag == "enemy" || collision.gameObject.tag == "enemybullet") && activeShield == false)
         {
-            SceneManager.LoadScene("Death Screen");
+            manager.LoadScene("Death Screen");
         }
 
         if (collision.gameObject.tag == "infiniteammo")

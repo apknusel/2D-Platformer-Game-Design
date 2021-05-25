@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class finishLine : MonoBehaviour
 {
+    public SceneManager manager;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Boss Level");
+            manager.LoadScene("Level Selector");
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class eyeController : MonoBehaviour
 {
+    public SceneManager manager;
     public Vector3 startPosition;
     public Vector3[] moveToPoints;
     public Vector3 currentPoint;
@@ -55,7 +56,7 @@ public class eyeController : MonoBehaviour
             if (health <= 0)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene("Win Screen");
+                manager.LoadScene("Win Screen");
             }
         }
     }

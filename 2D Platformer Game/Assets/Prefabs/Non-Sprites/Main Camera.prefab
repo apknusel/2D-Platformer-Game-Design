@@ -97,13 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e77f65f6a1b9a874aad468196f8008f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6478703776246612923, guid: f04986c651f1ab34d8830353526f022d, type: 3}
-  timeOffset: 2
-  posOffset: {x: 2, y: 1}
-  leftLimit: 0.73
-  rightLimit: 8.7
-  bottomLimit: -1.29
-  topLimit: 0.55
+  mainCamera: {fileID: 5084377940812832688}
+  target: {fileID: 6478703776246612896, guid: f04986c651f1ab34d8830353526f022d, type: 3}
+  offset: {x: 2, y: 1, z: -10}
+  smoothFactor: 1
+  minValues: {x: 0, y: 0, z: 0}
+  maxValue: {x: 0, y: 0, z: 0}
+  isCurScreenBox: 0
 --- !u!1 &5084377942290287008
 GameObject:
   m_ObjectHideFlags: 0

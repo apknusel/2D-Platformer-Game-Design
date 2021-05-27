@@ -101,8 +101,8 @@ MonoBehaviour:
   target: {fileID: 6478703776246612896, guid: f04986c651f1ab34d8830353526f022d, type: 3}
   offset: {x: 2, y: 1, z: -10}
   smoothFactor: 1
-  minValues: {x: 0, y: 0, z: 0}
-  maxValue: {x: 0, y: 0, z: 0}
+  minValues: {x: 0, y: 0, z: -10}
+  maxValue: {x: 0, y: 0, z: -10}
   isCurScreenBox: 0
 --- !u!1 &5084377942290287008
 GameObject:

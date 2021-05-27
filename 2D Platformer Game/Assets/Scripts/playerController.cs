@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
+    static AudioSource jumpSound;
+
     public SceneManager manager;
 
     public CharacterController2D controller;
@@ -33,6 +35,7 @@ public class playerController : MonoBehaviour
         overlay.updateAmmo(ammoCount);
         activeShield = false;
         shield.SetActive(false);
+        jumpSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -45,6 +48,7 @@ public class playerController : MonoBehaviour
         {
             jump = true;
             animator.SetBool("isJumping", true);
+            musicPlayer.PlaySound("jump");
         }
         if (Input.GetButtonDown("Crouch"))
         {
@@ -71,6 +75,10 @@ public class playerController : MonoBehaviour
                 Shoot();
             }
         }
+        else if (Input.GetButtonDown("Fire1") && ammoCount == 0)
+        {
+            musicPlayer.PlaySound("no ammo");
+        }
         overlay.updateAmmo(ammoCount);
     }
 
@@ -87,11 +95,13 @@ public class playerController : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        musicPlayer.PlaySound("shoot");
     }
 
     void crouchShoot()
     {
         Instantiate(bulletPrefab, crouchFirePoint.position, firePoint.rotation);
+        musicPlayer.PlaySound("shoot");
     }
 
     void FixedUpdate()
@@ -115,11 +125,15 @@ public class playerController : MonoBehaviour
 
         if (collision.gameObject.tag == "infiniteammo")
         {
+            musicPlayer.PlaySound("pickup");
             StartCoroutine(AmmoPowerup());
+            ammoCount = tempAmmo;
+            overlay.infiniteAmmo(true);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "ammo")
         {
+            musicPlayer.PlaySound("pickup");
             ammoCount += 1;
             Destroy(collision.gameObject);
         }
@@ -127,10 +141,15 @@ public class playerController : MonoBehaviour
         {
             if (!activeShield)
             {
+                musicPlayer.PlaySound("pickup");
                 activeShield = true;
                 shield.SetActive(true);
                 Destroy(collision.gameObject);
             }
+        }
+        if (collision.gameObject.tag == "spikes")
+        {
+            manager.LoadScene("Death Screen");
         }
     }
 
@@ -153,11 +172,11 @@ public class playerController : MonoBehaviour
 
     IEnumerator AmmoPowerup()
     {
-        infiniteAmmo = true;
         tempAmmo = ammoCount;
-        ammoCount = -1;
+        infiniteAmmo = true;
         yield return new WaitForSeconds(5);
         infiniteAmmo = false;
         ammoCount = tempAmmo;
+        overlay.infiniteAmmo(false);
     }
 }

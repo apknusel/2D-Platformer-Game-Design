@@ -555,6 +555,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6478703776246612900, guid: f04986c651f1ab34d8830353526f022d,
+        type: 3}
+      propertyPath: overlay
+      value: 
+      objectReference: {fileID: 1480538433}
     - target: {fileID: 6478703776246612923, guid: f04986c651f1ab34d8830353526f022d,
         type: 3}
       propertyPath: m_Name
@@ -606,6 +611,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480538433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 997903904749815747, guid: 7e306da3b5f776e47bb82a4c93fb4722,
+    type: 3}
+  m_PrefabInstance: {fileID: 2027890872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b893ea58682084f9bbcac9eba95b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1726863722
 GameObject:
   m_ObjectHideFlags: 0

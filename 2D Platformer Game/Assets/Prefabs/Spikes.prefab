@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6878781660899287403}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f3dbf0f31073543aad3a1dade7bc61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: 010c2e203ca0ffa4f9a7843518dbeb3f, type: 2}

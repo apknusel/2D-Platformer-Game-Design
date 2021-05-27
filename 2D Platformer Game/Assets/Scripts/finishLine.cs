@@ -11,7 +11,7 @@ public class finishLine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            manager.LoadScene("Level Selector");
+            manager.LoadScene("Win Screen");
         }
     }
 }

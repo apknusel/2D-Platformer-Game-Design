@@ -51,6 +51,11 @@ public class SceneManager : ScriptableObject
         }
     }
 
+    public void ReloadCurrentScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(GetActiveScene().name);
+    }
+
     public void Quit()
     {
         Application.Quit();

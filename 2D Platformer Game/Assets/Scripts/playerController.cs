@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
+    public string time;
+
     private pauseScreen pScreen;
 
     public SceneManager manager;

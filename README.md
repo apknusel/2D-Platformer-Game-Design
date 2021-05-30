@@ -52,7 +52,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![alt text](https://i.gyazo.com/a5a3758d998356b8ab1e5696e207c0b9.png)
+![alt text](https://i.gyazo.com/e0e44f005da5c3bdd6d4377fee764552.png)
 
 This project was created my senior year at Naperville Central High School for my Game Design class. I was in a team of four people where I lead the team and did all the programming and Unity creation. The three other members of the team worked on artwork, music, and a story for the game.
 

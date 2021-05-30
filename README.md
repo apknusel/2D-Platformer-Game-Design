@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/apknusel/Interstealther">
-    <img src="https://i.gyazo.com/c161328cc6d22a308504e189f5a60d1e.png" alt="Logo" width="80" height="140">
+    <img src="https://i.gyazo.com/16d7ea9a7a8538a62bace914031ef510.png" alt="Logo" width="194" height="347">
   </a>
 
   <h3 align="center">Interstealther</h3>

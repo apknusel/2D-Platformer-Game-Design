@@ -123,4 +123,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Alex Knusel - [@apknusel](https://twitter.com/apknusel?lang=en) - apknusel@yahoo.com
 
-Project Link: [https://github.com/apknusel/Interstealther(https://github.com/apknusel/Interstealther)
+Project Link: [https://github.com/apknusel/Interstealther(https://github.com/apknusel/Interstealther)]

@@ -1,11 +1,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/apknusel/SE-Semester-Project">
+  <a href="https://github.com/apknusel/Interstealther">
     <img src="https://i.gyazo.com/c161328cc6d22a308504e189f5a60d1e.png" alt="Logo" width="80" height="140">
   </a>
 
-  <h3 align="center">Rogue Knight</h3>
+  <h3 align="center">Interstealther</h3>
 
   <p align="center">
     Game Design Project
@@ -54,18 +54,16 @@
 ## About The Project
 ![alt text](https://i.gyazo.com/a5a3758d998356b8ab1e5696e207c0b9.png)
 
-This project was created for our senior year of highschool at Naperville Central High School for our Software Engineering class. This project took a total of about 4 months of daily work.
+This project was created my senior year at Naperville Central High School for my Game Design class. I was in a team of four people where I lead the team and did all the programming and Unity creation. The three other members of the team worked on artwork, music, and a story for the game.
 
 ### Built With
 
 * [Unity](https://unity.com/)
-* [OpenGameArt](https://opengameart.org/)
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To play the game run the SE Semester Project.exe in the SE Semester Project folder. You use WASD to walk around and left click to shoot. You are able to use E to go onto the next room after you eliminate all of the enemies. You are able to press R to go to the shop after all the enemies are eliminated as well.
+To play the game run `2D Platformer Game.exe` in the 2D Platformer Game folder. You use W and D to move left and right and press W to jump. While playing a level you can press ESC to pause/resume the game. There are powerups that you can pickup around the map that can provide you with temporary infinite ammo, a shield, or one more bullet. Defeat the enemies and reach the flag at the end of the level to complete it.
 
 ### Prerequisites
 
@@ -80,25 +78,25 @@ For editing:
 
 For playing:
 1. Download the repository
-2. Run the SE Semester Project.exe file
+2. Run `2D Platformer Game.exe`
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project could be used for someone who wants to try to build a similar game or for someone taking Software Engineering in the future.
+This project could be used for someone who wants to try to build a similar game or add on levels to our current game.
 
 <!-- ROADMAP -->
 ## Roadmap
 
 Known issues:
-- Enemies occasionally spawning in walls and not being able to move.
-- Stats occasionally not saving when switching between rooms.
+- Crouch animations plays when hitting head on ceiling.
+- In rare cases the player can get stuck on side of walls.
+- Changing the volume only works for the current level.
 
 Future additions:
-- Potions
-- Shield
-- Traps
+- More levels
+- Keep track of how fast a level is beaten
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -125,4 +123,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Alex Knusel - [@apknusel](https://twitter.com/apknusel?lang=en) - apknusel@yahoo.com
 
-Project Link: [https://github.com/apknusel/SE-Semester-Project](https://github.com/apknusel/SE-Semester-Project)
+Project Link: [https://github.com/apknusel/Interstealther(https://github.com/apknusel/Interstealther)

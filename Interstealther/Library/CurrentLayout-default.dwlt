@@ -127,7 +127,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -405,10 +405,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 4f398a0af0e2dfd46b918cf2c649b5d4,
+  m_AnimatorController: {fileID: 9100000, guid: 6dfda3a361ed05d4eb4489c0b71e78cf,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1155508949496967893, guid: 4f398a0af0e2dfd46b918cf2c649b5d4,
+  - m_Target: {fileID: 6699729622578075128, guid: 6dfda3a361ed05d4eb4489c0b71e78cf,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -461,34 +461,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Sprites/Enemies/Eyeball
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Sprites/Enemies/Eyeball
   m_LastFoldersGridSize: 64
   m_LastProjectPath: S:\Desktop\AP Computer Science\Interstealther\Interstealther
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 42}
-    m_SelectedIDs: 3c3c0000
-    m_LastClickedID: 15420
-    m_ExpandedIDs: 000000003c3c00003e3c0000403c0000423c0000443c000000ca9a3b
+    scrollPos: {x: 0, y: 86}
+    m_SelectedIDs: 6e3d0000
+    m_LastClickedID: 15726
+    m_ExpandedIDs: 000000003c3c00003e3c0000403c0000423c0000443c0000503c0000583c00002478000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Textures
+      m_OriginalName: Textures
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 30760
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000863a000060460000fe530000343e000090680000fe6600009c3f0000f2560000703d00001c5700002a57000038570000ce600000c64500003e5f0000ee4500007e390000503900008a390000603b00005c3b0000000000004a4d0000364d000088590000223b000054660000aa4000008e3a0000c23c00001e3b0000da3c0000d03c0000343c0000863b0000a6390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5cfbffff
+      m_ExpandedIDs: 18d2ffff30d6ffff46d6ffffbae6ffffd4e6ffff2ce7ffff5cfbffff304b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -687,9 +687,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 608.2132, y: 265.1134, z: -191.5625}
+    m_Target: {x: 0.25981513, y: -0.8394227, z: -0.06640625}
     speed: 2
-    m_Value: {x: 608.2132, y: 265.1134, z: -191.5625}
+    m_Value: {x: 0.25981513, y: -0.8394227, z: -0.06640625}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -739,9 +739,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 494.03705
+    m_Target: 7.959591
     speed: 2
-    m_Value: 494.03705
+    m_Value: 7.959591
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -835,11 +835,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 1142
-      height: 691
+      height: 670
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 571, y: 345.5}
+    m_Translation: {x: 571, y: 335}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -847,9 +847,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -571
-      y: -345.5
+      y: -335
       width: 1142
-      height: 691
+      height: 670
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1142, y: 691}

@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class eyeController : MonoBehaviour
 {
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+    public GameObject heart4;
+    public GameObject heart5;
+    public GameObject heart6;
+
     public SceneManager manager;
     public Vector3 startPosition;
     public Vector3[] moveToPoints;
@@ -24,7 +31,7 @@ public class eyeController : MonoBehaviour
 
     private float shootingTime;
 
-    public int health = 100;
+    public int health;
 
     void Start()
     {
@@ -52,7 +59,27 @@ public class eyeController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bullet"))
         {
-            health -= 5;
+            health -= 1;
+            if (health == 5)
+            {
+                heart6.SetActive(false);
+            }
+            else if (health == 4)
+            {
+                heart5.SetActive(false);
+            }
+            else if (health == 3)
+            {
+                heart4.SetActive(false);
+            }
+            else if (health == 2)
+            {
+                heart3.SetActive(false);
+            }
+            else if (health == 1)
+            {
+                heart2.SetActive(false);
+            }
             if (health <= 0)
             {
                 Destroy(gameObject);

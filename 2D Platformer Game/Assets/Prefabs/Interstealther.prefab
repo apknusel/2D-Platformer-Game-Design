@@ -145,8 +145,9 @@ GameObject:
   - component: {fileID: 6478703776246612901}
   - component: {fileID: 6478703776246612922}
   - component: {fileID: 6478703776246612899}
-  - component: {fileID: 4851065923819719865}
   - component: {fileID: 2554158788671584068}
+  - component: {fileID: 4749385958956852349}
+  - component: {fileID: 4503871098201570263}
   m_Layer: 8
   m_Name: Interstealther
   m_TagString: Player
@@ -378,7 +379,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &4851065923819719865
+--- !u!114 &2554158788671584068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478703776246612923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a910ceb767c9449bb06c4b4bcaf239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &4749385958956852349
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,9 +401,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 61afd2b32a15de34796cbff07bd0771d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -474,7 +487,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2554158788671584068
+--- !u!114 &4503871098201570263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -483,7 +496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6478703776246612923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a910ceb767c9449bb06c4b4bcaf239, type: 3}
+  m_Script: {fileID: 11500000, guid: cda8b1b168925a242a8aa348c3d06eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6478703776534628578

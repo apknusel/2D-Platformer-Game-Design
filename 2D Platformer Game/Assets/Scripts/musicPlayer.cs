@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class musicPlayer : MonoBehaviour
 {
-    public static AudioClip jumpSound, shootSound, pickupSound, noAmmoSound;
+    public static AudioClip jumpSound, shootSound, pickupSound, noAmmoSound, overallMusic;
     static AudioSource audioSrc;
 
     void Start()
@@ -13,8 +13,10 @@ public class musicPlayer : MonoBehaviour
         shootSound = Resources.Load<AudioClip>("shoot");
         pickupSound = Resources.Load<AudioClip>("pickup");
         noAmmoSound = Resources.Load<AudioClip>("no ammo");
+        overallMusic = Resources.Load<AudioClip>("overall music");
 
         audioSrc = GetComponent<AudioSource>();
+        audioSrc.PlayOneShot(overallMusic);
     }
 
     public static void PlaySound(string clip)

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
-    static AudioSource jumpSound;
+    private pauseScreen pScreen;
 
     public SceneManager manager;
 
@@ -32,54 +32,57 @@ public class playerController : MonoBehaviour
 
     void Start()
     {
+        pScreen = FindObjectOfType<pauseScreen>();
         overlay.updateAmmo(ammoCount);
         activeShield = false;
         shield.SetActive(false);
-        jumpSound = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        if (pScreen.IsGameRunning())
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            animator.SetBool("isJumping", true);
-            musicPlayer.PlaySound("jump");
-        }
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetBool("isJumping", true);
+                musicPlayer.PlaySound("jump");
+            }
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
 
-        if (Input.GetButtonDown("Fire1") && ammoCount != 0)
-        {
-            if (!infiniteAmmo)
+            if (Input.GetButtonDown("Fire1") && ammoCount != 0)
             {
-                ammoCount -= 1;
+                if (!infiniteAmmo)
+                {
+                    ammoCount -= 1;
+                }
+                if (crouch == true)
+                {
+                    crouchShoot();
+                }
+                else
+                {
+                    animator.Play("stillshooting", 0, 0);
+                    Shoot();
+                }
             }
-            if (crouch == true)
+            else if (Input.GetButtonDown("Fire1") && ammoCount == 0)
             {
-                crouchShoot();
+                musicPlayer.PlaySound("no ammo");
             }
-            else
-            {
-                animator.Play("stillshooting", 0, 0);
-                Shoot();
-            }
+            overlay.updateAmmo(ammoCount);
         }
-        else if (Input.GetButtonDown("Fire1") && ammoCount == 0)
-        {
-            musicPlayer.PlaySound("no ammo");
-        }
-        overlay.updateAmmo(ammoCount);
     }
 
     public void onLanding()
@@ -106,8 +109,11 @@ public class playerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
+        if (pScreen.IsGameRunning())
+        {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+            jump = false;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

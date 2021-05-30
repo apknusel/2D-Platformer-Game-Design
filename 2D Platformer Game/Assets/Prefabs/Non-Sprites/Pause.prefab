@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946112d4380a9d9449ae0deb3b2d6157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 6541116879773088432}
   isPaused: 0
   PauseMenu: {fileID: 7762392376942358327}
 --- !u!1 &7762392376244635180

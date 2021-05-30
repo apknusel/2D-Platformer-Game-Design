@@ -9,16 +9,22 @@ public class VolumeController : MonoBehaviour
 
     void Start()
     {
+        musicVolume = PlayerPrefs.GetFloat("vol");
         audioSrc = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        audioSrc.volume = musicVolume;
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in audios)
+        {
+            a.volume = musicVolume;
+        }
     }
 
     public void SetVolume(float vol)
     {
         musicVolume = vol;
+        PlayerPrefs.SetFloat("vol",vol);
     }
 }

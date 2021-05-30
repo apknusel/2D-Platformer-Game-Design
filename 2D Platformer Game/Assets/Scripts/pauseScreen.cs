@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class pauseScreen : MonoBehaviour
 {
+    public Slider volumeSlider;
     public bool isPaused;
     public GameObject PauseMenu;
+
+    void Start()
+    {
+        volumeSlider.value = PlayerPrefs.GetFloat("vol");
+    }
 
     void Update()
     {

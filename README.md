@@ -78,7 +78,7 @@ For editing:
 
 For playing:
 1. Download the repository
-2. Run `2D Platformer Game.exe`
+2. Run `Interstealther.exe`
 
 
 <!-- USAGE EXAMPLES -->

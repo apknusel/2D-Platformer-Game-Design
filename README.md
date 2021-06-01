@@ -78,8 +78,9 @@ For editing:
 
 For playing:
 1. Download the repository
-2. Run `Interstealther.exe`
-
+2. Extract the zip file
+3. Navigate to the Interstealther folder
+4. Run `Interstealther.exe`
 
 <!-- USAGE EXAMPLES -->
 ## Usage

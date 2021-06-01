@@ -91,13 +91,13 @@ This project could be used for someone who wants to try to build a similar game 
 ## Roadmap
 
 Known issues:
-- Crouch animations plays when hitting head on ceiling.
-- In rare cases the player can get stuck on side of walls.
-- Changing the volume only works for the current level.
+- Crouch animations plays when hitting head on ceiling
+- In rare cases the player can get stuck on side of walls
+- Changing the volume only works for the current level
 
 Future additions:
 - More levels
-- Keep track of how fast a level is beaten
+- Keep track using a leaderboard of how fast a level is beaten
 
 <!-- CONTRIBUTING -->
 ## Contributing

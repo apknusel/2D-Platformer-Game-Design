@@ -63,7 +63,7 @@ This project was created my senior year at Naperville Central High School for my
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To play the game run `2D Platformer Game.exe` in the 2D Platformer Game folder. You use W and D to move left and right and press W to jump. While playing a level you can press ESC to pause/resume the game. There are powerups that you can pickup around the map that can provide you with temporary infinite ammo, a shield, or one more bullet. Defeat the enemies and reach the flag at the end of the level to complete it.
+To play the game run `2D Platformer Game.exe` in the 2D Platformer Game folder. You use W and D to move left and right, W to jump, and S to crouch. While playing a level you can press ESC to pause/resume the game. There are powerups that you can pickup around the map that can provide you with temporary infinite ammo, a shield, or one more bullet. Defeat the enemies and reach the flag at the end of the level to complete it.
 
 ### Prerequisites
 

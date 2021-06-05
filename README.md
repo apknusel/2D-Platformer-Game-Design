@@ -4,8 +4,9 @@
   <a href="https://github.com/apknusel/Interstealther">
     <img src="https://i.gyazo.com/16d7ea9a7a8538a62bace914031ef510.png" alt="Logo" width="194" height="347">
   </a>
-
-  <h3 align="center">Interstealther</h3>
+  <a href=https://apknusel.itch.io/interstealther>
+    <h3 align="center">Interstealther</h3>
+  </a>
 
   <p align="center">
     Game Design Project
